@@ -62,7 +62,7 @@
   "\\(\033\\[0;1m\\)\\([^\033]*\\)\\(\033\\[0;2m\\)"
   "Regexp split in 3 groups (1: ansi start code, 2: word matched by 'syn' command, 3: ansi end code)")
 
-(defvar wordsmith-syn-command "/usr/local/bin/syn")
+(defvar wordsmith-syn-command (executable-find "/usr/local/bin/syn"))
 
 (defvar wordsmith-enable-at-init t
   "should wordsmith highlight nouns when mode is initialized? default is true")
