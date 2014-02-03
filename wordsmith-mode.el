@@ -1,4 +1,4 @@
-;;; wordsmith.el ---
+;;; wordsmith-mode.el --- Syntax analysis and NLP text-processing in Emacs (OSX-only)
 
 ;; Copyright (C) 2014 istib <http://github.com/istib/wordsmith-mode/>
 
@@ -8,9 +8,11 @@
 
 ;;; Documentation:
 ;;
-;; simple wrapper around the program 'syn', a tool that leverages
-;; OS X's natural language processing tools to tokenize and highlight
-;; English text that matches specified tags.
+;; Syntax highlighting (nouns, verb, adverbs...) in buffer.
+;; This package wraps functionality of MacOSX's natural language processing tools,
+;; (see details here: https://developer.apple.com/library/mac/documentation/cocoa/reference/NSLinguisticTagger_Class/Reference/Reference.html)
+;;
+;; It tokenizes and highlights English text that matches specified tags.
 ;;
 ;; Dependencies:
 ;; - OSX
@@ -25,7 +27,6 @@
 ;;      C-c w v - highlight verbs in buffer
 ;;      C-c w w - ido menu to pick which attribute to highlight
 ;;      C-c w k - disable wordsmith highlighting in buffer
-;; - M-x wordsmith-mode again to disable mode
 
 ;;; Implementation:
 ;; uses overlays - potentially needs reconsidering if it affects performance too much
@@ -185,5 +186,5 @@ this minor mode, see option `wordsmith-mode'. "
     (wordsmith-enable)
     (wordsmith-disable-in-buffer)))
 
-(provide 'wordsmith)
+(provide 'wordsmith-mode)
 ;;; wordsmith.el ends here
