@@ -9,7 +9,8 @@ and takes inspiration from [iA Writer Pro](http://writer.pro/).
 
 ## Usage:
 
-* M-x wordsmith-mode
+* enable via `M-x wordsmith-mode'
+
 * shortcuts:
 
     > C-c w n : highlight nouns in buffer
@@ -20,22 +21,22 @@ and takes inspiration from [iA Writer Pro](http://writer.pro/).
 
     > C-c w k : disable wordsmith highlighting in buffer
 
-- currently, you need to manually re-run the command for it to update when the buffer has changed.
+* currently, you need to manually re-run the command for it to update when the buffer has changed.
 
 ## Installation
 
-Please install the OSX tool `syn' first (see instructions at https://github.com/stephencelis/syn).
+Install [syn](https://github.com/stephencelis/syn) first (requires OSX 10.7+) via shell:
 
-You can then install the package using [melpa](http://melpa.milkbox.net/#/):
+```
+curl -Ls https://github.com/stephencelis/syn/releases/download/v0.2.1/syn > syn && chmod 755 syn && mv syn /usr/local/bin
+```
+
+Then install the wordsmith Emacs package using [melpa](http://melpa.milkbox.net/#/):
 
 ```
 M-x package-install RET wordsmith-mode RET
 ```
 
-## Compatibility
-
-This emacs package currently only works under OSX.
-
-
 ## Screencast
+
 ![mini-screencast](wordsmith-screencast.gif)
