@@ -179,11 +179,9 @@ this minor mode, see option `wordsmith-mode'. "
   ;; The minor mode bindings.
   :keymap wordsmith-mode-keymap
   :global nil
-  :group 'wordsmith)
-
-(defadvice wordsmith-mode (after wordsmith-toggle activate)
+  :group 'wordsmith
   (if wordsmith-mode
-    (wordsmith-enable)
+      (wordsmith-enable)
     (wordsmith-disable-in-buffer)))
 
 (provide 'wordsmith-mode)
