@@ -64,8 +64,10 @@
 
 (defvar wordsmith-syn-command (executable-find "/usr/local/bin/syn"))
 
-(defvar wordsmith-enable-at-init t
-  "should wordsmith highlight nouns when mode is initialized? default is true")
+(defcustom wordsmith-enable-at-init t
+  "Should wordsmith highlight nouns when mode is initialized?"
+  :type 'boolean
+  :group 'wordsmith)
 
 (defvar wordsmith-syn-attrs '("nouns" "verbs"
                               "adjectives" "adverbs"
