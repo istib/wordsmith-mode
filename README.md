@@ -9,27 +9,33 @@ and takes inspiration from [iA Writer Pro](http://writer.pro/).
 
 ## Usage:
 
-- M-x wordsmith-mode
-- pre-defined shortcuts:
-* C-c w n : highlight nouns in buffer
-* C-c w v : highlight verbs in buffer
-* C-c w w : ido menu to pick which attribute to highlight
-* C-c w k : disable wordsmith highlighting in buffer
+* M-x wordsmith-mode
+* shortcuts:
+
+    > C-c w n : highlight nouns in buffer
+
+    > C-c w v : highlight verbs in buffer
+
+    > C-c w w : ido menu to pick an attribute to highlight
+
+    > C-c w k : disable wordsmith highlighting in buffer
+
+- currently, you need to manually re-run the command for it to update when the buffer has changed.
 
 ## Installation
 
-If you have already used Melpa to install some other package then all you have to do is:
+Please install the OSX tool `syn' first (see instructions at https://github.com/stephencelis/syn).
 
+You can then install the package using [melpa](http://melpa.milkbox.net/#/):
+
+```
 M-x package-install RET wordsmith-mode RET
+```
 
 ## Compatibility
 
 This emacs package currently only works under OSX.
-Please install 'syn' first (see instructions at https://github.com/stephencelis/syn).
 
-## Feedback
-
-This is my first emacs package. Feedback and contributions are very welcome
 
 ## Screencast
 ![mini-screencast](wordsmith-screencast.gif)
