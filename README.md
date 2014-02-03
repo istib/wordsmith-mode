@@ -16,6 +16,12 @@ and takes inspiration from [iA Writer Pro](http://writer.pro/).
 * C-c w w : ido menu to pick which attribute to highlight
 * C-c w k : disable wordsmith highlighting in buffer
 
+## Installation
+
+If you have already used Melpa to install some other package then all you have to do is:
+
+M-x package-install RET wordsmith-mode RET
+
 ## Compatibility
 
 This emacs package currently only works under OSX.
