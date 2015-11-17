@@ -187,4 +187,4 @@ this minor mode, see option `wordsmith-mode'. "
     (wordsmith-disable-in-buffer)))
 
 (provide 'wordsmith-mode)
-;;; wordsmith.el ends here
+;;; wordsmith-mode.el ends here
