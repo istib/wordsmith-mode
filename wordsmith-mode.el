@@ -75,7 +75,13 @@
   "\\(\033\\[0;1m\\)\\([^\033]*\\)\\(\033\\[0;2m\\)"
   "Regexp split in 3 groups (1: ansi start code, 2: word matched by 'syn' command, 3: ansi end code)")
 
-(defvar wordsmith-syn-command (executable-find "/usr/local/bin/syn"))
+(defvar wordsmith-syn-command nil)
+
+(unless wordsmith-syn-command
+  (let ((syn-loc (executable-find "syn")))
+    (if syn-loc
+	(setq wordsmith-syn-command syn-loc)
+      (error "Cannot locate program syn"))))
 
 (defcustom wordsmith-enable-at-init t
   "Should wordsmith highlight nouns when mode is initialized?"
